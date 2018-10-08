@@ -25,7 +25,6 @@ def solve_it(input_data):
     value = 0
     weight = 0
     taken = [0]*len(items)
-    
 
     sorted_items = sorted(items, key=attrgetter('density'), reverse = True)
 
