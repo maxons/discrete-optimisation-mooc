@@ -43,7 +43,6 @@ def solve_it(input_data):
             else : 
                 x[ii][jj] = x[ii-1][jj]
     
-    print(x)
     best_result = x[item_count-1][capacity-1]
     
     ii = item_count-1
@@ -59,9 +58,7 @@ def solve_it(input_data):
         else :
             taken[ii-1] = 1
             ref_val = ref_val - items[ii-1].value
-            jj = max(where(x[ii-1] == ref_val)[0])
-            print(x[ii-1][jj])
-    
+            jj = max(where(x[ii-1] == ref_val)[0])    
     
     # prepare the solution in the specified output format
     output_data = str(best_result) + ' ' + str(0) + '\n'
